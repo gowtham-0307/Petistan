@@ -15,10 +15,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "category")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = DomesticPetDTO.class, name = "Domestic"),
-        @JsonSubTypes.Type(value = WildPetDTO.class, name = "Wild")
-})
+@JsonSubTypes({ @JsonSubTypes.Type(value = DomesticPetDTO.class, name = "Domestic"),
+                @JsonSubTypes.Type(value = WildPetDTO.class, name = "Wild") })
 public class PetDTO {
 
     @EqualsAndHashCode.Include
@@ -26,6 +24,6 @@ public class PetDTO {
 
     private String name;
     private Gender gender;
-    private PetType petType;
+    private PetType type;
 
 }

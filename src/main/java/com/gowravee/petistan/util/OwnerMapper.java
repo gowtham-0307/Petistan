@@ -28,9 +28,13 @@ public interface OwnerMapper {
         };
     }
 
+    @Mapping(source = "type", target = "type")
     DomesticPet domesticPetDTOToDomesticPet(DomesticPetDTO domesticPetDTO);
 
+    @Mapping(source = "type", target = "type")
     WildPet wildPetDTOToWildPet(WildPetDTO wildPetDTO);
+
+
 
     @Mapping(source = "pet", target = "petDTO")
     OwnerDTO ownerToOwnerDTO(Owner owner);

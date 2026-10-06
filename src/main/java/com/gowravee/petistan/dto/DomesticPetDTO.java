@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@ToString
+@ToString(callSuper = true)
 public class DomesticPetDTO extends PetDTO {
 
     private LocalDate birthDate;
